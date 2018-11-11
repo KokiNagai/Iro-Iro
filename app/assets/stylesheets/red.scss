@@ -1,0 +1,151 @@
+// Place all the styles related to the Normals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+
+@mixin fontTitle {
+  font-weight: 600;
+}
+@mixin subTitle($color) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color;
+}
+@mixin colorSelect($background) {
+  width: 60px;
+  height: 100px;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  margin-right: 20px;
+  cursor: pointer;
+  background: $background;
+}
+
+.home-wrapper {
+  .home-title {
+    @include fontTitle;
+    color: $lightpink;
+  }
+}
+
+.home-red {
+  width: 90%;
+  margin: 40px auto;
+  p {
+    @include subTitle($red);
+    margin-top: 50px;
+  }
+  .home-red-select {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    .home-red-select-info {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+      }
+      input {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+        width: 60px;
+        border: none;
+      }
+    }
+  }
+  // 赤から黒へ==========================
+  #red-1 {
+    @include colorSelect(#ff0000);
+  }
+  #red-2 {
+    @include colorSelect(#ee0000);
+  }
+  #red-3 {
+    @include colorSelect(#dd0000);
+  }
+  #red-4 {
+    @include colorSelect(#cc0000);
+  }
+  #red-5 {
+    @include colorSelect(#bb0000);
+  }
+  #red-6 {
+    @include colorSelect(#aa0000);
+  }
+  #red-7 {
+    @include colorSelect(#990000);
+  }
+  #red-8 {
+    @include colorSelect(#880000);
+  }
+  #red-9 {
+    @include colorSelect(#770000);
+  }
+  #red-10 {
+    @include colorSelect(#660000);
+  }
+  #red-11 {
+    @include colorSelect(#550000);
+  }
+  #red-12 {
+    @include colorSelect(#440000);
+  }
+  #red-13 {
+    @include colorSelect(#330000);
+  }
+  #red-14 {
+    @include colorSelect(#220000);
+  }
+  // 赤から白へ==========================
+  #red-15 {
+    @include colorSelect(#ff0000);
+  }
+  #red-16 {
+    @include colorSelect(#ff1111);
+  }
+  #red-17 {
+    @include colorSelect(#ff2222);
+  }
+  #red-18 {
+    @include colorSelect(#ff3333);
+  }
+  #red-19 {
+    @include colorSelect(#ff4444);
+  }
+  #red-20 {
+    @include colorSelect(#ff5555);
+  }
+  #red-21 {
+    @include colorSelect(#ff6666);
+  }
+  #red-22 {
+    @include colorSelect(#ff7777);
+  }
+  #red-23 {
+    @include colorSelect(#ff8888);
+  }
+  #red-24 {
+    @include colorSelect(#ff9999);
+  }
+  #red-25 {
+    @include colorSelect(#ffaaaa);
+  }
+  #red-26 {
+    @include colorSelect(#ffbbbb);
+  }
+  #red-27 {
+    @include colorSelect(#ffcccc);
+  }
+  #red-28 {
+    @include colorSelect(#ffdddd);
+  }
+}
+
+.selectPopup {
+  background:#000000;
+  opacity:0.8;
+}

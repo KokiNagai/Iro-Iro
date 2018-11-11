@@ -1,0 +1,52 @@
+<div id="header">
+  <div class="header-logo">
+    <h1 class="logo">Iro Iro</h1>
+  </div>
+  <ul id="helpnav">
+    <%= link_to '#' do %>
+    <li class="navLists helpNav-1" onmouseover="headerCursorOver(1)" onmouseout="headerCursorOut(1)">
+      <i class="fa fa-paint-brush"></i>
+      <span>色を探す</span>
+      <ul class="hnl helpNavList-1">
+        <h2>Find Color</h2>
+        <li><div class="hnl-red"></div>Red</li>
+        <li><div class="hnl-blue"></div>Blue</li>
+        <li><div class="hnl-yellow"></div>Yellow</li>
+        <li><div class="hnl-green"></div>Green</li>
+      </ul>
+    </li>
+    <% end %>
+    <%= link_to find_path do %>
+    <li class="navLists helpNav-2" onmouseover="headerCursorOver(2)" onmouseout="headerCursorOut(2)">
+      <i class="fa fa-hourglass-half"></i>
+      <span>色を配合する</span>
+      <ul class="hnl helpNavList-2">
+        <h2>Comibine Colors with</h2>
+        <li><div class="hnl-red"></div>Red</li>
+        <li><div class="hnl-blue"></div>Blue</li>
+        <li><div class="hnl-yellow"></div>Yellow</li>
+        <li><div class="hnl-green"></div>Green</li>
+      </ul>
+    </li>
+    <% end %>
+    <%= link_to '#' do %>
+    <li class="navLists helpNav-3" onmouseover="headerCursorOver(3)" onmouseout="headerCursorOut(3)">
+      <i class="fa fa-question-circle"></i>
+      <span>お問い合わせ</span>
+    </li>
+    <% end %>
+    <%= link_to '#' do %>
+    <li class="navLists helpNav-4" onmouseover="headerCursorOver(4)" onmouseout="headerCursorOut(4)">
+      <i class="fa fa-sticky-note-o"></i>
+      <span>サイト情報</span>
+    </li>
+    <% end %>
+    <%= link_to '#' do %>
+    <li class="navLists helpNav-5" onmouseover="headerCursorOver(5)" onmouseout="headerCursorOut(5)">
+      <i class="fa fa-map-pin"></i>
+      <span>アクセス</span>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<%= javascript_include_tag 'header.js' %>

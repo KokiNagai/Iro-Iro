@@ -1,0 +1,10 @@
+$lightpink: #ffb6c1;
+$red: #ff4c4c;
+$green: #00FF00;
+$green-link: #5f9ea0;
+$gray-medium-dark: #4c4c4c;
+$gray-border-light: #cfcfcf;
+
+@mixin borderRadius {
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+}

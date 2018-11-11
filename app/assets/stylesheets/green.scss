@@ -1,0 +1,151 @@
+@import 'colors';
+
+
+@mixin fontTitle {
+  font-weight: 600;
+}
+@mixin subTitle($color) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color;
+}
+@mixin colorSelect($background) {
+  width: 60px;
+  height: 100px;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  margin-right: 20px;
+  cursor: pointer;
+  background: $background;
+}
+
+.home-wrapper {
+  .home-title {
+    @include fontTitle;
+    color: $lightpink;
+  }
+}
+
+.home-green {
+  width: 90%;
+  margin: 40px auto;
+  p {
+    @include subTitle($green);
+    margin-top: 50px;
+  }
+  .home-red-select {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    .home-red-select-info {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+      }
+      input {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+        width: 60px;
+        border: none;
+      }
+      i:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // 赤から黒へ==========================
+  #green-1 {
+    @include colorSelect(#00FF00);
+  }
+  #green-2 {
+    @include colorSelect(#00F000);
+  }
+  #green-3 {
+    @include colorSelect(#00E000);
+  }
+  #green-4 {
+    @include colorSelect(#00D000);
+  }
+  #green-5 {
+    @include colorSelect(#00C000);
+  }
+  #green-6 {
+    @include colorSelect(#00B000);
+  }
+  #green-7 {
+    @include colorSelect(#00A000);
+  }
+  #green-8 {
+    @include colorSelect(#009000);
+  }
+  #green-9 {
+    @include colorSelect(#008000);
+  }
+  #green-10 {
+    @include colorSelect(#007000);
+  }
+  #green-11 {
+    @include colorSelect(#006000);
+  }
+  #green-12 {
+    @include colorSelect(#005000);
+  }
+  #green-13 {
+    @include colorSelect(#004000);
+  }
+  #green-14 {
+    @include colorSelect(#003000);
+  }
+  // 赤から白へ==========================
+  #green-15 {
+    @include colorSelect(#32cd32);
+  }
+  #green-16 {
+    @include colorSelect(#00fa9a);
+  }
+  #green-17 {
+    @include colorSelect(#028760);
+  }
+  #green-18 {
+    @include colorSelect(#84ff84);
+  }
+  #green-19 {
+    @include colorSelect(#8fbc8f);
+  }
+  #green-20 {
+    @include colorSelect(#dbffdb);
+  }
+  #green-21 {
+    @include colorSelect(#3dff3d);
+  }
+  #green-22 {
+    @include colorSelect(#006633);
+  }
+  #green-23 {
+    @include colorSelect(#7fffd4);
+  }
+  #green-24 {
+    @include colorSelect(#98fb98);
+  }
+  #green-25 {
+    @include colorSelect(#009900);
+  }
+  #green-26 {
+    @include colorSelect(#ccffcc);
+  }
+  #green-27 {
+    @include colorSelect(#00cc99);
+  }
+  #green-28 {
+    @include colorSelect(#a4d5bd);
+  }
+}
+
+.selectPopup {
+  background:#000000;
+  opacity:0.8;
+}

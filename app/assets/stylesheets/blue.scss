@@ -1,0 +1,151 @@
+@import 'colors';
+
+
+@mixin fontTitle {
+  font-weight: 600;
+}
+@mixin subTitle($color) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color;
+}
+@mixin colorSelect($background) {
+  width: 60px;
+  height: 100px;
+  border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  margin-right: 20px;
+  cursor: pointer;
+  background: $background;
+}
+
+.home-wrapper {
+  .home-title {
+    @include fontTitle;
+    color: $lightpink;
+  }
+}
+
+.home-blue {
+  width: 90%;
+  margin: 40px auto;
+  p {
+    @include subTitle($green);
+    margin-top: 50px;
+  }
+  .home-red-select {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    .home-red-select-info {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+      }
+      input {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
+        width: 60px;
+        border: none;
+      }
+      i:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  // 赤から黒へ==========================
+  #blue-1 {
+    @include colorSelect(#0000ff);
+  }
+  #blue-2 {
+    @include colorSelect(#0000ee);
+  }
+  #blue-3 {
+    @include colorSelect(#0000dd);
+  }
+  #blue-4 {
+    @include colorSelect(#0000cc);
+  }
+  #blue-5 {
+    @include colorSelect(#0000bb);
+  }
+  #blue-6 {
+    @include colorSelect(#0000aa);
+  }
+  #blue-7 {
+    @include colorSelect(#000099);
+  }
+  #blue-8 {
+    @include colorSelect(#000088);
+  }
+  #blue-9 {
+    @include colorSelect(#000077);
+  }
+  #blue-10 {
+    @include colorSelect(#000066);
+  }
+  #blue-11 {
+    @include colorSelect(#000055);
+  }
+  #blue-12 {
+    @include colorSelect(#000044);
+  }
+  #blue-13 {
+    @include colorSelect(#000033);
+  }
+  #blue-14 {
+    @include colorSelect(#000022);
+  }
+  // 赤から白へ==========================
+  #blue-15 {
+    @include colorSelect(#2792c3);
+  }
+  #blue-16 {
+    @include colorSelect(#006699);
+  }
+  #blue-17 {
+    @include colorSelect(#67b5b7);
+  }
+  #blue-18 {
+    @include colorSelect(#00608d);
+  }
+  #blue-19 {
+    @include colorSelect(#00a0de);
+  }
+  #blue-20 {
+    @include colorSelect(#33ccff);
+  }
+  #blue-21 {
+    @include colorSelect(#87ceeb);
+  }
+  #blue-22 {
+    @include colorSelect(#008db7);
+  }
+  #blue-23 {
+    @include colorSelect(#00a1e9);
+  }
+  #blue-24 {
+    @include colorSelect(#2ca9e1);
+  }
+  #blue-25 {
+    @include colorSelect(#38a1db);
+  }
+  #blue-26 {
+    @include colorSelect(#305097);
+  }
+  #blue-27 {
+    @include colorSelect(#00afcc);
+  }
+  #blue-28 {
+    @include colorSelect(#00608d);
+  }
+}
+
+.selectPopup {
+  background:#000000;
+  opacity:0.8;
+}

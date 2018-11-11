@@ -1,2 +1,20 @@
-<h1>Normals#home</h1>
-<p>Find me in app/views/normals/home.html.erb</p>
+<div class="home-wrapper">
+  <div class="home-title">
+    <h1>Iro Iro</h1>
+    <p>色をクリックしますと、その色のコードをコピー出来ます（16進数）</p>
+  </div>
+  <div class="home-main">
+    <%= render 'red' %>
+    <%= render 'green' %>
+    <%= render 'blue' %>
+  </div>
+</div>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.3/scrollreveal.min.js"></script>
+
+<script>
+window.sr = ScrollReveal();
+sr.reveal('.blue-scr', { easing: 'ease', origin: 'left', duration: 2000, distance: '400px', opacity: 0.8, scale: 1 });
+</script> -->
+<%= javascript_include_tag 'home.js' %>
