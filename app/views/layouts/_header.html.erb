@@ -1,18 +1,28 @@
 <div id="header">
   <div class="header-logo">
+    <%= link_to root_path do %>
     <h1 class="logo">Iro Iro</h1>
+    <% end %>
   </div>
   <ul id="helpnav">
     <%= link_to '#' do %>
     <li class="navLists helpNav-1" onmouseover="headerCursorOver(1)" onmouseout="headerCursorOut(1)">
-      <i class="fa fa-paint-brush"></i>
+      <p><i class="fa fa-paint-brush"></i></p>
       <span>色を探す</span>
       <ul class="hnl helpNavList-1">
         <h2>Find Color</h2>
+        <%= link_to colors_red_path do %>
         <li><div class="hnl-red"></div>Red</li>
+        <% end %>
+        <%= link_to colors_blue_path do %>
         <li><div class="hnl-blue"></div>Blue</li>
+        <% end %>
+        <%= link_to colors_red_path do %>
         <li><div class="hnl-yellow"></div>Yellow</li>
+        <% end %>
+        <%= link_to colors_green_path do %>
         <li><div class="hnl-green"></div>Green</li>
+        <% end %>
       </ul>
     </li>
     <% end %>

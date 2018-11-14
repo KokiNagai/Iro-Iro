@@ -1,10 +1,12 @@
 @import 'colors';
+@import 'red';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 @mixin listColor($color) {
   width: 20px;
@@ -17,7 +19,6 @@
 
 #header {
   width: 100%;
-  margin-bottom: 10px;
   font-size: 1rem;
   border-bottom: 1px solid $gray-border-light;
   box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
@@ -29,6 +30,8 @@
       font-size: 2rem;
       font-weight: bold;
       margin: 0;
+      color: $lightpink;
+      font-family: 'Comic Sans MS',sans-serif;
     }
   }
   a {
@@ -40,14 +43,21 @@
     .navLists {
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      padding: 20px 10px 20px 10px;
       cursor: pointer;
       i {
         text-align: center;
+        color: $gray-medium-dark;
+      }
+      p {
+        text-align: center;
       }
       span {
+        text-align: center;
         margin-top: 10px;
-        font-size: 1rem;
+        padding-bottom: 3px;
+        font-size: 0.8rem;
+        color: $gray-medium-dark;
       }
     }
     li {
@@ -58,26 +68,16 @@
     .hnl {
       display: none;
       position: absolute;
-      background-color: #fff;
+      background-color: #f7f7f7;
       padding: 10px 60px 30px 10px;
-      @include borderRadius;
-      border: 2px solid $lightpink;
-      top: 100px;
-      &:before {
-        content: "";
-        position: absolute;
-        top: -15px;
-        width: 0px;
-        height: 0px;
-        margin: auto;
-        border-style: solid;
-        border-color: transparent transparent $lightpink transparent;
-        border-width: 0px 14px 14px 14px;
-        z-index: 2;
-      }
+      border-radius: 0px 0px 5px 5px / 0px 0px 5px 5px;
+      border: 1px solid $gray-border-light;
+      top: 102px;
+      border-top: none;
+      z-index: 100;
       h2 {
         margin: 20px 0 20px 0;
-        color: $gray-medium-dark;
+        color: $lightpink;
         font-size: 1.5rem;
         font-weight: 600;
       }
@@ -95,11 +95,22 @@
       }
       li {
         margin-top: 10px;
-        color: $green-link;
+        color: $gray-medium-dark;
         display: block;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
+}
+
+.helpNavList-1 {
+  right: 340px;
+}
+
+.helpNavList-2 {
+  right: 100px;
 }
 
 .helpNav-1, .helpNav-2, .helpNav-3, .helpNav-4, .helpNav-5 {
@@ -111,5 +122,64 @@
   flex-direction: column;
   padding: 20px;
   cursor: pointer;
+  background-color: #f7f7f7;
   border-top: 5px solid $lightpink;
+}
+
+// footer(PC)=======================================
+
+@mixin homeSNS($bg) {
+  background: $bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-main {
+  width: 100%;
+  margin-top: 100px;
+  border-top: 1px solid $gray-border-light;
+  .home-sns {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    text-align: center;
+    span {
+      margin: 0 10px 0 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 60%;
+      color: #fff;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+
+#home-g {
+  @include homeSNS(#dd4b39);
+}
+#home-f {
+  @include homeSNS(#3B5998);
+}
+#home-t {
+  @include homeSNS(#55acee);
+}
+#home-i {
+  @include homeSNS(#D93177);
+}
+
+// HOME(PC)==========================================
+
+.home-wrapper {
+  .home-title {
+    @include fontTitle;
+    color: $lightpink;
+    width: 70%;
+    margin: 50px auto;
+  }
 }

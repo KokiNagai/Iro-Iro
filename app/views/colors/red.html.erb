@@ -1,0 +1,95 @@
+<div class="red-wrapper">
+  <div class="red-image">
+    <p><%= image_tag('/color1.jpg') %></p>
+    <span>Red</span>
+    <div class="red-point"></div>
+    <div id="red-image-under">
+      <div class="red-upper-point">
+        </div>
+    </div>
+  </div>
+
+  <div class="red-sample-wrapper">
+    <div class="red-sample-wrapper1">
+      <div class="red-flex1">
+        <div class="red-sample-1">
+          <div class="red-sample-content1">
+            <div class="red-sample1" onclick="redImage(1)">
+              <%= image_tag('/google+.png') %>
+            </div>
+          </div>
+          <p id="red-font-color1">Google Plus</p>
+          <p id="red-font-p"><input type="text" value="#DD5144" id="sample--1" readonly></p>
+        </div>
+
+        <div class="red-sample-2">
+          <div class="red-sample-content2">
+            <div class="red-sample2" onclick="redImage(2)">
+              <%= image_tag('/insta.png') %>
+            </div>
+          </div>
+          <p id="red-font-color2">Instagram</p>
+          <p id="red-font-p"><input type="text" value="#D93177" id="sample--2" readonly></p>
+        </div>
+
+        <div class="red-sample-3">
+          <div class="red-sample-content3">
+            <div class="red-sample3" onclick="redImage(3)">
+              <%= image_tag('/pint.png') %>
+            </div>
+          </div>
+          <p id="red-font-color3">Pinterest</p>
+          <p id="red-font-p"><input type="text" value="#BD081C" id="sample--3" readonly></p>
+        </div>
+      </div>
+
+      <div class="red-sample-7">
+        <div class="red-sample-content7">
+          <div class="red-sample7" onclick="redImage(7)">
+            <%= image_tag('/ted.png') %>
+          </div>
+        </div>
+        <p id="red-font-color7">TED</p>
+        <p id="red-font-p"><input type="text" value="#DA281C" id="sample--7" readonly></p>
+      </div>
+
+      <div class="red-flex2">
+        <div class="red-sample-4">
+          <div class="red-sample-content4">
+            <div class="red-sample4" onclick="redImage(4)">
+              <%= image_tag('/mercari.png') %>
+            </div>
+          </div>
+          <p id="red-font-color4">メルカリ</p>
+          <p id="red-font-p"><input type="text" value="#E3463D" id="sample--4" readonly></p>
+        </div>
+
+        <div class="red-sample-5">
+          <div class="red-sample-content5">
+            <div class="red-sample5" onclick="redImage(5)">
+              <%= image_tag('/money.png') %>
+            </div>
+          </div>
+          <p id="red-font-color5">Money forward</p>
+          <p id="red-font-p"><input type="text" value="#E27610" id="sample--5" readonly></p>
+        </div>
+
+        <div class="red-sample-6">
+          <div class="red-sample-content6">
+            <div class="red-sample6" onclick="redImage(6)">
+              <%= image_tag('/flicker.png') %>
+            </div>
+          </div>
+          <p id="red-font-color6">flicker</p>
+          <p id="red-font-p"><input type="text" value="#E27610" id="sample--6" readonly></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sss" style="background: #DA281C; width: 400px; height: 400px">
+
+</div>
+
+<%= javascript_include_tag 'color1.js' %>

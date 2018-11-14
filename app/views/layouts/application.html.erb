@@ -6,12 +6,18 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="assets/css/fakeLoader.css">
+    <script src="assets/fakeloader/fakeLoader.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
+    <div id='fakeloader'  class="fakeloader"></div>
     <%= render 'layouts/header' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <%= javascript_include_tag 'main.js' %>
+    <%= javascript_include_tag 'fakeLoader.js' %>
   </body>
 </html>

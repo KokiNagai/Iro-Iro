@@ -1,0 +1,268 @@
+@mixin redSamples($margin) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: $margin;
+}
+
+@mixin redContent($size, $margin) {
+  width: $size;
+  height: $size;
+  margin: $margin;
+  overflow: hidden;
+  border-radius: 60%;
+}
+
+@mixin redSampleN($size, $fontSize) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  &:before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "copy";
+    background: radial-gradient(rgba(0,0,0,0.6), rgba(0,0,0,1));
+    color: #fff;
+    font-size: $fontSize;
+    font-family: 'Patua One', cursive;
+    letter-spacing: 4px;
+    text-shadow: 0 0 2px #000;
+    filter: blur(4px);
+    transition-duration: 0.3s;
+    opacity: 0;
+    z-index: 100;
+    width: $size;
+    height: $size;
+    border-radius: 60%;
+  }
+  &:hover{
+    transform: scale(1.1);
+    &:before{
+      transform: scale(1.3);
+      filter: blur(0);
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin redColorImg($size) {
+  width: $size;
+  height: $size;
+
+}
+
+@mixin redSamplesP {
+  text-align: center;
+  width: 200px;
+  display: block;
+  input {
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+  }
+}
+@mixin redSampleFont($color, $size) {
+  color: $color;
+  font-weight: 600;
+  font-size: $size;
+}
+
+.red-wrapper {
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    transform-origin: left bottom;
+  }
+  .red-point {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    right: 30%;
+    border-radius: 60%;
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+  }
+  span {
+    position: absolute;
+    top: 170px;
+    right: 20%;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #FF416C;
+    font-family: 'Comic Sans MS',sans-serif;
+    border-bottom: 2px solid #FF416C;
+  }
+  #red-image-under {
+      width: 100%;
+      height: 160px;
+      top: 250px;
+      position: absolute;
+      background: inherit;
+      z-index: 10;
+      bottom: 0;
+      background-color: #fff;
+      transform-origin: left top;
+      transform: skewY(5deg);
+  }
+
+.red-sample-1 {
+  @include redSamples(50px 0 0 100px);
+  .red-sample-content1 {
+    @include redContent(100px, 20px auto);
+    .red-sample1 {
+      @include redSampleN(100px, 1rem);
+      img {
+        @include redColorImg(100px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color1 {
+    @include redSampleFont(#DD5144, 1.2rem)
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+.red-sample-2 {
+  @include redSamples(20px 0 0 230px);
+  .red-sample-content2 {
+    @include redContent(200px, 20px auto);
+    .red-sample2 {
+      @include redSampleN(200px, 22px);
+      img {
+        @include redColorImg(200px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color2 {
+    @include redSampleFont(#DD5144, 1.5rem)
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+.red-sample-3 {
+  @include redSamples(150px 0 0 400px);
+  .red-sample-content3 {
+    @include redContent(250px, 20px auto);
+    .red-sample3 {
+      @include redSampleN(250px, 22px);
+      img {
+        @include redColorImg(250px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color3 {
+    @include redSampleFont(#DD5144, 1.5rem)
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+.red-sample-4 {
+  @include redSamples(0px 0 100px 200px);
+  width: 200px;
+  .red-sample-content4 {
+    @include redContent(150px, 20px auto);
+    .red-sample4 {
+      @include redSampleN(150px, 22px);
+      img {
+        @include redColorImg(150px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color4 {
+    @include redSampleFont(#E3463D, 1.5rem);
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+.red-sample-5 {
+  @include redSamples(0px 0 0 200px);
+  width: 200px;
+  .red-sample-content5 {
+    @include redContent(250px, 20px auto);
+    .red-sample5 {
+      @include redSampleN(250px, 22px);
+      img {
+        @include redColorImg(250px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color5 {
+    @include redSampleFont(#E3463D, 1.5rem);
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+.red-sample-6 {
+  @include redSamples(10px 0 0 300px);
+  width: 200px;
+  .red-sample-content6 {
+    @include redContent(150px, 20px auto);
+    .red-sample6 {
+      @include redSampleN(150px, 22px);
+      img {
+        @include redColorImg(150px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color6 {
+    @include redSampleFont(#E3463D, 1.5rem);
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+.red-sample-7 {
+  @include redSamples(10px 0 0 30%);
+  .red-sample-content7{
+    @include redContent(150px, 20px auto);
+    .red-sample7 {
+      @include redSampleN(150px, 22px);
+      img {
+        @include redColorImg(150px);
+        border-radius: 60%;
+      }
+    }
+  }
+  #red-font-color7 {
+    @include redSampleFont(#E3463D, 1.5rem);
+  }
+  p {
+    @include redSamplesP;
+  }
+}
+
+
+.red-flex1, .red-flex2 {
+  display: flex;
+}
+}
